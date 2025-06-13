@@ -23,3 +23,11 @@ def index(request):
 
 def about(request):
     return HttpResponse("hello world")
+
+from datetime import datetime
+def index_use_template(requests):
+    article_records = Post.objects.all()
+    now = datetime.now()
+    return render(requests, "index.html", locals())
+    # 等同於
+    # return render(requests, "index.html", {'now': now})
