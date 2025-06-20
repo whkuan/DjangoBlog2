@@ -75,6 +75,7 @@ TEMPLATES = [
 
 
 
+
 WSGI_APPLICATION = "DjangoBlog.wsgi.application"
 
 
